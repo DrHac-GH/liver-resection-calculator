@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肝切除術前評価</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>肝切除術前評価</h1>
+        <div class="main-content">
+            <div class="input-column">
+                <form id="calculator-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="icg-r15">ICG R15 (%)</label>
+                        <input type="number" step="0.1" id="icg-r15">
+                    </div>
+                    <div class="form-group">
+                        <label for="total-bilirubin">総ビリルビン (mg/dL)</label>
+                        <input type="number" step="0.1" id="total-bilirubin">
+                    </div>
+                    <div class="form-group">
+                        <label for="albumin">アルブミン (g/dL)</label>
+                        <input type="number" step="0.1" id="albumin">
+                    </div>
+                    <div class="form-group">
+                        <label for="pt-activity">PT活性値 (%)</label>
+                        <input type="number" id="pt-activity">
+                    </div>
+                    <div class="form-group">
+                        <label for="ascites">腹水</label>
+                        <select id="ascites">
+                            
+                            <option value="なし">なし</option>
+                            <option value="軽度">軽度</option>
+                            <option value="中等度以上">中等度以上</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="ascites-effect-group" style="display: none;">
+                        <label for="ascites-effect">腹水治療効果</label>
+                        <select id="ascites-effect">
+                            <option value="治療効果あり">治療効果あり</option>
+                            <option value="治療効果少ない">治療効果少ない</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="encephalopathy">脳症</label>
+                        <select id="encephalopathy">
+                            
+                            <option value="なし">なし</option>
+                            <option value="軽度">軽度 (I度)</option>
+                            <option value="時々昏睡">時々昏睡 (II度以上)</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="output-column">
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
